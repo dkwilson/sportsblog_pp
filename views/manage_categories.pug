@@ -7,6 +7,7 @@ block content
                 h1 #{title}
             .col-md-3
                 a(class='btn btn-primary create-btn', href='/manage/categories/add') Add Category
+        != messages()
         table(class='table table-striped')
             tr
                 th Category Title

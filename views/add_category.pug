@@ -3,6 +3,10 @@ extends layout
 block content
     .container
         h1 #{title}
+        ul.errors
+            if errors
+                each err, i in errors
+                    li.alert.alert-danger #{err.param + ' field - ' + err.msg}
         form(method='post', action='/categories/add')
             .form-group
                 label Title:
